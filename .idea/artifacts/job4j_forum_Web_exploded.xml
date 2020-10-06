@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="job4j_forum:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/job4j_forum_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="job4j_forum/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="job4j_forum" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

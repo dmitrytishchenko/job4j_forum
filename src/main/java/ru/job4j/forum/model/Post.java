@@ -1,11 +1,16 @@
 package ru.job4j.forum.model;
 
+import javax.persistence.*;
 import java.util.Calendar;
 import java.util.Objects;
-
+@Entity
+@Table(name = "posts")
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Column(name = "description")
     private String desc;
     private Calendar created;
 
@@ -14,6 +19,9 @@ public class Post {
         this.name = name;
         this.desc = desc;
         this.created = created;
+    }
+
+    public Post() {
     }
 
     public int getId() {

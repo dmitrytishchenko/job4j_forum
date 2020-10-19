@@ -12,6 +12,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Optional;
 
 @Controller
 public class PostControl {
@@ -22,8 +23,8 @@ public class PostControl {
     }
 
     @GetMapping({"/post"})
-    public String getPost(@RequestParam(value = "id", required = false) int id, Model model) {
-        Post post = posts.getPost(id);
+    public String getPost(@RequestParam(value = "id", required = false) Long id, Model model) {
+        Optional<Post> post = posts.getPost(id);
         model.addAttribute("post", post);
         return "post";
     }
@@ -31,7 +32,7 @@ public class PostControl {
     @GetMapping({"/edit"})
     public String editPost(@RequestParam(value = "id", required = false) String id, Model model) {
         if (id != null) {
-            Post post = posts.getPost(Integer.valueOf(id));
+            Optional<Post> post = posts.getPost(Long.valueOf(id));
             model.addAttribute("post", post);
         }
         return "edit";

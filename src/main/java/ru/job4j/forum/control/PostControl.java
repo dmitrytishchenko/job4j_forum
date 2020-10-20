@@ -24,8 +24,10 @@ public class PostControl {
 
     @GetMapping({"/post"})
     public String getPost(@RequestParam(value = "id", required = false) Long id, Model model) {
-        Optional<Post> post = posts.getPost(id);
-        model.addAttribute("post", post);
+        if (id != null) {
+            Optional<Post> post = posts.getPost(id);
+            model.addAttribute("post", post);
+        }
         return "post";
     }
 

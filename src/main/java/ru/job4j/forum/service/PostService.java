@@ -15,7 +15,7 @@ public class PostService {
     }
 
     public Post addPost(Post post) {
-       posts.save(post);
+        posts.save(post);
         return post;
     }
 

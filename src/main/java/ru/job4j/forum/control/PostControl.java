@@ -2,9 +2,7 @@ package ru.job4j.forum.control;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ru.job4j.forum.model.Post;
 import ru.job4j.forum.service.PostService;
 
@@ -22,36 +20,37 @@ public class PostControl {
         this.posts = posts;
     }
 
-    @GetMapping({"/post"})
-    public String getPost(@RequestParam(value = "id", required = false) Long id, Model model) {
-        if (id != null) {
-            Optional<Post> post = posts.getPost(id);
-            model.addAttribute("post", post);
-        }
-        return "post";
+    @GetMapping({"/create"})
+    public String createNewPost(@ModelAttribute Post post) {
+        return "create";
     }
 
-    @GetMapping({"/edit"})
-    public String editPost(@RequestParam(value = "id", required = false) String id, Model model) {
-        if (id != null) {
-            Optional<Post> post = posts.getPost(Long.valueOf(id));
-            model.addAttribute("post", post);
-        }
-        return "edit";
-    }
-
-    @PostMapping
-    public String create(@RequestParam("id") int id,
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String create(@RequestParam("id") long id,
                          @RequestParam("name") String name,
                          @RequestParam("desc") String desc,
-                         @RequestParam("created") String created,
-                         Model model) throws ParseException {
+                         @RequestParam("created") String created
+    ) throws ParseException {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
         cal.setTime(sdf.parse(created));
         Post post = new Post(id, name, desc, cal);
         posts.addPost(post);
-        model.addAttribute("posts", posts.getAllPosts());
-        return "index";
+        return "redirect:/index";
+    }
+
+    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
+    public String get(@PathVariable long id, Model model) {
+        model.addAttribute("post", posts.getPost(id).get());
+        return "post";
+    }
+
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String editPost(@PathVariable long id, Model model) {
+        Optional<Post> post = posts.getPost(id);
+        if (post.isPresent()) {
+            model.addAttribute("post", post.get());
+        }
+        return "edit";
     }
 }

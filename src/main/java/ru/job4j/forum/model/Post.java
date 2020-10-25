@@ -8,13 +8,13 @@ import java.util.Objects;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String name;
     @Column(name = "description")
     private String desc;
     private Calendar created;
 
-    public Post(int id, String name, String desc, Calendar created) {
+    public Post(long id, String name, String desc, Calendar created) {
         this.id = id;
         this.name = name;
         this.desc = desc;
@@ -24,11 +24,11 @@ public class Post {
     public Post() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

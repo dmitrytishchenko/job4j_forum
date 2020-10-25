@@ -12,30 +12,27 @@
 <body>
 <div class="container mt-3">
     <div class="row">
-        <h4>Название темы: <c:out value="${post.name}"/></h4>
+        <h4>Create new Post</h4>
     </div>
-    <div class="row">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">№</th>
-                <th scope="col">Тема</th>
-                <th scope="col">Обсуждение</th>
-                <th scope="col">Дата создания</th>
-                <th scope="col">Редактирование</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row"><c:out value="${post.id}"/></th>
-                <td><c:out value="${post.name}"/></td>
-                <td><c:out value="${post.desc}"/></td>
-                <td><c:out value="${post.created.getTime()}"/></td>
-                <td><a href="/edit/${post.id}">Редактирование поста</a></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" class="form-control" id="id" name="id" placeholder="Input ID">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Input name">
+        </div>
+        <div class="form-group">
+            <label for="desc">Desc</label>
+            <input type="text" class="form-control" id="desc" name="desc" placeholder="Input description">
+        </div>
+        <div class="form-group">
+            <label for="created">Created</label>
+            <input type="text" class="form-control" id="created" name="created" placeholder="Input date in format Fri Oct 16 20:47:19 MSK 2020">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 <!-- Optional JavaScript -->

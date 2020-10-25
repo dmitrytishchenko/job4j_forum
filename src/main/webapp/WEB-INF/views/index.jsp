@@ -19,7 +19,7 @@
         <h4>Форум job4j</h4>
     </div>
     <div style="text-align: right">
-        <h5><a href="/edit">Create new post!</a></h5>
+        <h5><a href="/create">Create new post!</a></h5>
     </div>
     <div class="row">
         <table class="table">
@@ -31,7 +31,7 @@
             <tbody>
             <c:forEach items="${posts}" var="post">
                 <tr>
-                    <td><a href="post?id=${post.id}"><c:out value="${post.name}"/></a></td>
+                    <td><a href="post/${post.id}"><c:out value="${post.name}"/></a></td>
                 </tr>
             </c:forEach>
             </tbody>

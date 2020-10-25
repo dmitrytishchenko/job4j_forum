@@ -43,7 +43,7 @@ public class IndexControlTest {
     @Test
     @WithMockUser
     public void shouldReturnEditPage() throws Exception {
-        this.mockMvc.perform(get("/edit"))
+        this.mockMvc.perform(get("/edit/{id}", 4))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("edit"));
@@ -51,8 +51,17 @@ public class IndexControlTest {
 
     @Test
     @WithMockUser
+    public void shouldReturnCreatePage() throws Exception {
+        this.mockMvc.perform(get("/create"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("create"));
+    }
+
+    @Test
+    @WithMockUser
     public void shouldReturnPostPage() throws Exception {
-        this.mockMvc.perform(get("/post"))
+        this.mockMvc.perform(get("/post/{id}", 4))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("post"));

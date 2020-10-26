@@ -23,6 +23,7 @@
                 <th scope="col">Обсуждение</th>
                 <th scope="col">Дата создания</th>
                 <th scope="col">Редактирование</th>
+                <th scope="col">Удалить пост</th>
             </tr>
             </thead>
             <tbody>
@@ -32,6 +33,7 @@
                 <td><c:out value="${post.desc}"/></td>
                 <td><c:out value="${post.created.getTime()}"/></td>
                 <td><a href="/edit/${post.id}">Редактирование поста</a></td>
+                <td><a href="/delete/${post.id}">Удалить пост</a></td>
             </tr>
             </tbody>
         </table>

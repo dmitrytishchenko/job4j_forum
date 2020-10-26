@@ -28,4 +28,8 @@ public class PostService {
         posts.findAll().forEach(rsl::add);
         return rsl;
     }
+
+    public void delete(long id) {
+        posts.deleteById(id);
+    }
 }

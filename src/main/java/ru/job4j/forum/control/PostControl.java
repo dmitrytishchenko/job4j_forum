@@ -53,4 +53,10 @@ public class PostControl {
         }
         return "edit";
     }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deletePost(@PathVariable long id) {
+        posts.delete(id);
+        return "redirect:/index";
+    }
 }

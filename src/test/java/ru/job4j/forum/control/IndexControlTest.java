@@ -61,7 +61,7 @@ public class IndexControlTest {
     @Test
     @WithMockUser
     public void shouldReturnPostPage() throws Exception {
-        this.mockMvc.perform(get("/post/{id}", 4))
+        this.mockMvc.perform(get("/post/{id}", 2))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("post"));

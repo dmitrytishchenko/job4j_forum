@@ -1,0 +1,13 @@
+ru\job4j\forum\store\UserRepository.class
+ru\job4j\forum\service\PostService.class
+ru\job4j\forum\model\User.class
+ru\job4j\forum\service\UserService.class
+ru\job4j\forum\control\PostControl.class
+ru\job4j\forum\model\Post.class
+ru\job4j\forum\control\UserControl.class
+ru\job4j\forum\SecurityInit.class
+ru\job4j\forum\Main.class
+ru\job4j\forum\SecurityConfig.class
+ru\job4j\forum\control\LoginControl.class
+ru\job4j\forum\control\IndexControl.class
+ru\job4j\forum\store\PostRepository.class

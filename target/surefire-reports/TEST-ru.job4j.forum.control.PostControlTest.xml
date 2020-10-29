@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.job4j.forum.control.PostControlTest" time="5.827" tests="7" errors="0" skipped="0" failures="0">
+  <properties/>
+  <testcase name="loginTest" classname="ru.job4j.forum.control.PostControlTest" time="0.216"/>
+  <testcase name="badCredential" classname="ru.job4j.forum.control.PostControlTest" time="0.799"/>
+  <testcase name="editPostTest" classname="ru.job4j.forum.control.PostControlTest" time="0.168"/>
+  <testcase name="test" classname="ru.job4j.forum.control.PostControlTest" time="0.123"/>
+  <testcase name="shouldReturnDefaultMessage" classname="ru.job4j.forum.control.PostControlTest" time="0.22"/>
+  <testcase name="correctLoginTest" classname="ru.job4j.forum.control.PostControlTest" time="0.371"/>
+  <testcase name="createPostTest" classname="ru.job4j.forum.control.PostControlTest" time="0.099"/>
+</testsuite>

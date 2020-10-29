@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\control\IndexControl.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\control\LoginControl.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\control\PostControl.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\control\UserControl.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\Main.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\model\Post.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\model\User.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\SecurityConfig.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\SecurityInit.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\service\PostService.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\service\UserService.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\store\PostRepository.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\java\ru\job4j\forum\store\UserRepository.java">
+</file>
+<file name="C:\projects\job4j_forum\src\test\java\ru\job4j\forum\control\IndexControlTest.java">
+</file>
+<file name="C:\projects\job4j_forum\src\test\java\ru\job4j\forum\control\PostControlTest.java">
+</file>
+<file name="C:\projects\job4j_forum\src\main\resources\application.properties">
+</file>
+</checkstyle>
